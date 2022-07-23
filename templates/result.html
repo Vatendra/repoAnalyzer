@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repo Analyzer</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About</a></li>
+        </ul>
+    </nav>
+    <section>
+        URL : {{ data['url'] }} <br>
+        Commits: {{ data['commits'] }} <br>
+        Contributors: {{ data['contributors'] }} <br>
+        Forks: {{ data['forks'] }} <br>
+        Issues: {{ data['issues'] }} <br>
+        Rating: {{ data['rating'] }} <br>
+        Verdict: {{ data['verdict'] }} <br>
+    </section>
+</body>
+</html>
