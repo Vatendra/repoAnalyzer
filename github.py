@@ -1,5 +1,5 @@
 import requests
-
+import re
 
 class Github:
     def __init__(self, url):
@@ -14,10 +14,8 @@ class Github:
         return self.response['open_issues_count']
 
     def get_commits_count(self):
-        commits_url = self.response['commits_url']
-        response = self.gh_session.get(commits_url).json()
-        print(commits_url)
-        return len(response)
+        commits_count =  re.search('\d+$', requests.get(f'{self.url}/commits?per_page=1').links['last']['url']).group()
+        return int(commits_count)
 
     def get_contributors_count(self):
         contributors_url = self.response['contributors_url']
