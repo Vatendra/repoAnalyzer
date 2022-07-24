@@ -1,19 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Repo Analyzer</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="about">About</a></li>
-        </ul>
-    </nav>
-    <form action="result" method="post">
-        <input type="text" name="url" placeholder="Enter Repo URL">
-        <input type="submit" value="Analyze">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Repo Analyser</title>
+  </head>
+  <body>
+    
+    <form class="user-form" id="form" action="result" method="post">
+      <input type="text" name="url" placeholder="Enter Repo URL">
+      <input type="submit" value="Analyze">
     </form>
-</body>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+  </body>
 </html>
+
