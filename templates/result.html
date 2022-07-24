@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Github Profiles</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Repo Result</title>
   </head>
   <body>
-
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -16,7 +15,7 @@
           </ul>
         </div>
     </nav>
-    <h3> URL searched: {{ data['url'] }}</h3>
+    <h3> URL searched: <strong>{{ data['url'] }}</strong></h3>
     <main id="main">
         <div class="card">
             <div>
@@ -25,38 +24,15 @@
             </div>
             <div class="user-info">
               <h2>{{data['rating']}}</h2>
-              {{data['verdict']}}
               <ul>
-                <li>{{ data['commits'] }} <strong>Commits</strong></li>
+                <li>{{ data['commits'] }} <strong>Commits &nbsp;</strong></li>
                 <li>{{ data['contributors'] }} <strong>Contributors</strong></li>
                 <li>{{ data['forks'] }} <strong>Forks</strong></li>
               </ul>
-        
-              <div id="repos"></div>
             </div>
           </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
   </body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Repo Analyzer</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about">About</a></li>
-        </ul>
-    </nav>
-    <section>
-       
-    </section>
-</body>
 </html>
