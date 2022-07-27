@@ -48,7 +48,7 @@ class Resolve:
         if domain == "bitbucket.org":
             return 'bitbucket', "https://api.bitbucket.org/2.0/repositories" + self.__get_path()
         elif domain == "github.com":
-            return 'github', "https://api.github.com/repos" + self.__get_path()
+            return 'github', "https://api.github.com/repos/" + self.__get_repo_owner() + "/" + self.__get_repo_name()
         elif domain == "gitlab.com":
             return 'gitlab', "https://gitlab.com/api/v4/projects/" + self.__get_repo_owner() + "%2F" + self.__get_repo_name()
         elif domain == "npmjs.com":

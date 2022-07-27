@@ -1,6 +1,7 @@
 import requests
 import re
 
+
 class Github:
     def __init__(self, url):
         self.url = url
