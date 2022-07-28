@@ -14,9 +14,3 @@ class Gitlab:
     def get_data(self):
         data = {'url': self.url, 'forks': self.get_forks_count()}
         return data
-
-
-url = 'https://gitlab.com/api/v4/projects/gitlab-org/gitlab-ui'
-gl = resolve.Resolve(url).get_api_url()
-forks = Gitlab(gl[1]).get_forks_count()
-print(forks)
