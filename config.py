@@ -1,0 +1,7 @@
+# authentication might be required
+GITHUB_USERNAME = ''
+GITHUB_PASSWORD = ''
+GITLAB_USERNAME = ''
+GITLAB_PASSWORD = ''
+BITBUCKET_USERNAME = ''
+BITBUCKET_PASSWORD = ''
