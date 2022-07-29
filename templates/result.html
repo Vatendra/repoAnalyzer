@@ -20,7 +20,7 @@
         <div class="card">
             <div>
                 <!-- embed safe and unsafe image src in the data -->
-              <img src="" alt="${user.name}" class="avatar">
+              <img src="{{ data['image_path'] }}"alt="" class="avatar">
             </div>
             <div class="user-info">
               <h2> Critical Score: {{data['critical_score']}}</h2>
