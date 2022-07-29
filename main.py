@@ -4,7 +4,7 @@ from gitlab import Gitlab
 from npm import Npm
 from pypi import Pypi
 from resolve import Resolve
-from criticalscore import CriticalScore
+from ccf import Ccf
 
 
 class Main:
@@ -28,5 +28,5 @@ class Main:
             data = Pypi(self.api_url).get_data()
         else:
             return {}
-        data['critical_score'] = 1  # CriticalScore(data).get_result()
+        data['critical_score'] = Ccf(data).get_ccf_score()
         return data
