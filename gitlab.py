@@ -67,7 +67,6 @@ class Gitlab:
         """Returns the data of the repository"""
         data = {'created_since_months': self.created_since_months(), 'updated_since_months': self.updated_since_months(),
                 'forks': self.get_forks_count(),
-                'contributors': self.get_contributors_count(), 'commit_frequency': self.get_commits_count()/(self.get_created_since_months*4)
-                }
+                'contributors': self.get_contributors_count(), 'commits': self.get_commits_count()}
         return data
 
