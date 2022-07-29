@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import main
+from main import Main
 app = Flask(__name__)
 
 
@@ -12,7 +12,7 @@ def home():  # put application's code here
 def result():
     """ Render result and send data to result.html """
     url = request.form['url']
-    data = main.Main(url).get_data()
+    data = Main(url).get_data()
     return render_template('result.html', data=data)
 
 

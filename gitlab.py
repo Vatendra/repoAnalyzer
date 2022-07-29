@@ -1,15 +1,18 @@
 import datetime
 from bs4 import BeautifulSoup
-import re
-
+import config
 import requests
 
 
 class Gitlab:
     def __init__(self, url):
         self.url = url
-        self.gl_session = requests.Session()
-        self.response = self.gl_session.get(self.url).json()
+        self.session = requests.Session()
+        if config.GITLAB_PRIVATE_TOKEN != '':
+            self.response = self.session.get(url, headers={'PRIVATE-TOKEN': config.GITLAB_PRIVATE_TOKEN}).json()
+        else:
+            self.response = self.session.get(self.url).json()
+        self.data = {}
 
     def created_since_months(self):
         """Returns the number of months since the project was created"""
@@ -30,7 +33,6 @@ class Gitlab:
         return self.response['forks_count']
 
     def __scrap(self, url):
-        request = requests.get(url)
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
         stats = soup.find('nav', class_='project-stats')
@@ -45,13 +47,28 @@ class Gitlab:
         repo_url = repo_url.replace('%2F', '/')
         return self.__scrap(repo_url)
 
+    def get_contributors_count(self):
+        """Returns the number of contributors"""
+        contributors_url = self.url + '/members'
+        page = 0
+        contributors_count = 0
+        while contributors_url:
+            page += 1
+            contributors_url = contributors_url + '?page=' + str(page) + '&per_page=100'
+            response = self.session.get(contributors_url, headers={'PRIVATE-TOKEN': config.GITLAB_PRIVATE_TOKEN}).\
+                json()
+            contributors_count += len(response)
+            print("length"+str(len(response)))
+            if len(response) < 100:
+                return contributors_count
+        return contributors_count
+
     def get_data(self):
-        data = {'url': self.url, 'forks': self.get_forks_count()}
+        """Returns the data of the repository"""
+        data = {'created_since_months': self.created_since_months(),
+                'updated_since_months': self.updated_since_months(),
+                'forks': self.get_forks_count(), 'commits': self.get_commits_count(),
+                'contributors': self.get_contributors_count()
+                }
         return data
 
-
-test = Gitlab('https://gitlab.com/api/v4/projects/fdroid%2Ffdroiddata')
-print(test.created_since_months())
-print(test.updated_since_months())
-print(test.get_forks_count())
-print(test.get_commits_count())
