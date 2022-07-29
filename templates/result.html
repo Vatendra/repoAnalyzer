@@ -23,11 +23,13 @@
               <img src="" alt="${user.name}" class="avatar">
             </div>
             <div class="user-info">
-              <h2>{{data['rating']}}</h2>
+              <h2> Critical Score: {{data['critical_score']}}</h2>
               <ul>
-                <li>{{ data['commits'] }} <strong>Commits &nbsp;</strong></li>
+                <li>{{ data['commits'] }} <strong>Commits</strong></li>
                 <li>{{ data['contributors'] }} <strong>Contributors</strong></li>
                 <li>{{ data['forks'] }} <strong>Forks</strong></li>
+                  <li>{{ data['created_since_months'] }}<strong>Months</strong></li>
+                <li> {{ data['updated_since_months'] }}<strong>Last Update</strong> </li>
               </ul>
             </div>
           </div>
