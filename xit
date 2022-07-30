@@ -1,0 +1,197 @@
+[33mcommit 704e44743c9a97f5ce0e12103628752ca5dff802[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Sat Jul 30 12:35:16 2022 +0530
+
+    fix: colo of the tab change
+
+[33mcommit 4cdf3c9681b433cc0f4adf9bbed47ab70dcc307e[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 12:02:16 2022 +0530
+
+    add date of creation and last update detail.
+
+[33mcommit 997a44772194d32a382cc875c145ac2361a2c726[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 11:40:59 2022 +0530
+
+    fix: repo_name.
+
+[33mcommit 6cca4a6fc084d2e886ddd73600780de505d75830[m
+Merge: 030db70 74a9869
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 10:38:32 2022 +0530
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 030db7034dfadbd80dba8aaaefca77a0a628874a[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 10:37:55 2022 +0530
+
+    fix image path
+
+[33mcommit 74a986991c5505adde6e1d6eedbb467cf3ec1fdf[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 10:37:55 2022 +0530
+
+    fix contributors count for bitbucket
+
+[33mcommit 6806fbf84fb974267172dee6fcf1e46552058f6c[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Sat Jul 30 01:01:19 2022 +0530
+
+    feat: added image path in the static and json data
+
+[33mcommit 21e8b090921e2584b6813a2dafce41e0d3011b92[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 00:11:41 2022 +0530
+
+    fix contributors count for bitbucket
+
+[33mcommit 36dfb8532eb6f8d1213c5822cc43712f684ac878[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 30 00:03:52 2022 +0530
+
+    fix keyword.
+
+[33mcommit 6239b12d62b7214582bbb7af9224ec41ed3e148c[m
+Merge: 412604f 485cf3d
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Fri Jul 29 23:52:51 2022 +0530
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 412604f1dac74a37bcd20f797593cbca86a62d2f[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Fri Jul 29 23:51:40 2022 +0530
+
+    Add ccf for score.
+
+[33mcommit 485cf3dff89f8cca0826953d29a7e3b74e321aef[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Fri Jul 29 19:05:27 2022 +0530
+
+    fix:function error
+
+[33mcommit 7d8ce1fd221b0debb3cecba6447231f2da7d9c38[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Fri Jul 29 19:00:27 2022 +0530
+
+    fix: keyerror commits
+
+[33mcommit 99ea5b7e7ed65bfaf7d5c022eab85da385e6dd65[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Fri Jul 29 16:20:14 2022 +0530
+
+    Expose data to the front end.
+
+[33mcommit de1df0ff85e44ebb2f6b658159133f0cb552cb03[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Fri Jul 29 16:19:03 2022 +0530
+
+    Optimize imports.
+    Resolve url issues.
+
+[33mcommit f455caed45a68f2f3ed7464a5873ca7782c6884d[m
+Merge: 33d2d1c bb4d576
+Author: Anubhav Mishra <52543520+Vatendra@users.noreply.github.com>
+Date:   Fri Jul 29 12:52:26 2022 +0530
+
+    Merge pull request #2 from Vatendra/algo
+    
+    feat: added algorithm for testing repo vulnerability
+
+[33mcommit bb4d576b050a04d7534b38dec89597f39c56a0b8[m[33m ([m[1;31morigin/algo[m[33m, [m[1;32malgo[m[33m)[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Fri Jul 29 12:48:53 2022 +0530
+
+    added algorithm for testing repo vulnerability
+
+[33mcommit 33d2d1c83f6b6c7616bae48823654c56ecf1036a[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Fri Jul 29 03:38:18 2022 +0530
+
+    Add following functions -
+    1. created_since_months
+    2. updated_since_months
+    3. get_forks_count
+    4. get_commits_count
+    To the following files -
+    1. github.py
+    2. bitbucket.py
+    3. gitlab.py
+
+[33mcommit d6f36d9d8c106d1f677706cb0d49db80fd90708a[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Thu Jul 28 23:25:48 2022 +0530
+
+    Add config.
+
+[33mcommit 594b7fabdadc937619896b0774b0b317d7cab1ad[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Thu Jul 28 14:52:15 2022 +0530
+
+    Add algorithm.
+
+[33mcommit 2023ba6c8e1594a6a3094546c308458006af41cf[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Thu Jul 28 14:03:26 2022 +0530
+
+    Simplify resolve and added test coverage.
+
+[33mcommit 7dbe5794baf2b9bdc0f25b994970627d0ae8cf39[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Wed Jul 27 21:10:26 2022 +0530
+
+    Add json data fetch support for npm, pypi, gitlab and bitbucket.
+
+[33mcommit ec019786370bce825e350ee7a66f9995b910eda6[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Mon Jul 25 00:13:38 2022 +0530
+
+    fix: added correct source for css in result.html
+
+[33mcommit 7f2ba2be7b88c8ffee12a979b192dd2d704d8084[m
+Merge: 743f53b 2992ac2
+Author: karan kartikeya <61800214+karankartikeya@users.noreply.github.com>
+Date:   Mon Jul 25 00:07:48 2022 +0530
+
+    Merge pull request #1 from Vatendra/frontend-enhancement
+    
+    added .gitignore and frontend files
+
+[33mcommit 2992ac21136ff4c89afee591a7f414f8db0f0952[m[33m ([m[1;31morigin/frontend-enhancement[m[33m, [m[1;32mfrontend-enhancement[m[33m)[m
+Author: karankartikeya <karankartikey72@gmail.com>
+Date:   Mon Jul 25 00:04:51 2022 +0530
+
+    added .gitignore and frontend files
+
+[33mcommit 743f53b3a27ebb9509673e06ee63cd4629571f4d[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sun Jul 24 20:24:36 2022 +0530
+
+    Commits count fix.
+
+[33mcommit 6aff8c40a5753d37d7e6ade58880329a04e8ce50[m
+Merge: faf6981 d040e42
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sun Jul 24 17:29:50 2022 +0530
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit faf6981549288cafb3547373d93b04ce68ea9692[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sun Jul 24 17:29:21 2022 +0530
+
+    Add json data output for github.
+
+[33mcommit d040e427217535f8e638444382d1a62fc83fb535[m
+Author: Anubhav Mishra <52543520+Vatendra@users.noreply.github.com>
+Date:   Sat Jul 23 11:25:45 2022 +0530
+
+    Delete .idea directory.
+
+[33mcommit 34ad278ec60803a5b444bdf63542dd47b5ee2c88[m
+Author: Anubhav Mishra <anubhavmishra2001@gmail.com>
+Date:   Sat Jul 23 11:22:40 2022 +0530
+
+    Initial commit
