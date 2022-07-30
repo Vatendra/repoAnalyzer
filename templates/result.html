@@ -15,7 +15,7 @@
           </ul>
         </div>
     </nav>
-    <h3> URL searched: <strong>{{ data['url'] }}</strong></h3>
+    <h3> <strong>{{ data['repo_name'] }}</strong></h3>
     <main id="main">
         <div class="card">
             <div>
@@ -23,13 +23,11 @@
               <img src="{{ url_for('static', filename = 'images/' + data['image_path']) }}"alt="" class="avatar">
             </div>
             <div class="user-info">
-              <h2> Critical Score: {{data['critical_score']}}</h2>
+              <h2> Critical Score: {{data['ccf_score']}}</h2>
               <ul>
                 <li>{{ data['commits'] }} <strong>Commits</strong></li>
                 <li>{{ data['contributors'] }} <strong>Contributors</strong></li>
                 <li>{{ data['forks'] }} <strong>Forks</strong></li>
-                  <li>{{ data['created_since_months'] }}<strong>Months</strong></li>
-                <li> {{ data['updated_since_months'] }}<strong>Last Update</strong> </li>
               </ul>
             </div>
           </div>

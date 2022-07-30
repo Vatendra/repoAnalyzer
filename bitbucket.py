@@ -13,6 +13,7 @@ class Bitbucket:
     def created_since_months(self):
         """Returns the number of months since the repository was created"""
         date_created = self.response['created_on'][:10]
+        self.data['created_on'] = date_created
         current_date = datetime.datetime.now()
         no_of_months = (current_date - datetime.datetime.strptime(date_created, '%Y-%m-%d')).days / 30
         return round(no_of_months)
@@ -20,6 +21,7 @@ class Bitbucket:
     def updated_since_months(self):
         """Returns the number of months since the repository was updated"""
         date_updated = self.response['updated_on'][:10]
+        self.data['last_updated'] = date_updated
         current_date = datetime.datetime.now()
         no_of_months = (current_date - datetime.datetime.strptime(date_updated, '%Y-%m-%d')).days / 30
         return round(no_of_months)
@@ -60,6 +62,6 @@ class Bitbucket:
         """Returns the data of the repository"""
         data = {'created_since_months': self.created_since_months(), 'updated_since_months': self.updated_since_months(),
                 'forks': self.get_forks_count(), 'commits': self.get_commits_count(),
-                'contributors': self.get_contributors_count()}
-        print(self.__contributors)
+                'contributors': self.get_contributors_count(), 'created_on': self.data['created_on'],
+                'last_updated': self.data['last_updated']}
         return data

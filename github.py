@@ -13,6 +13,7 @@ class Github:
     def created_since_months(self):
         """Returns the number of months since the repository was created"""
         created_at = self.response['created_at']
+        self.data['created_on'] = created_at[:10]
         current_date = datetime.datetime.now()
         no_of_months = (current_date - datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')).days / 30
         return round(no_of_months)
@@ -20,6 +21,7 @@ class Github:
     def updated_since_months(self):
         """Returns the number of months since the repository was updated"""
         updated_at = self.response['updated_at']
+        self.data['last_updated'] = updated_at[:10]
         current_date = datetime.datetime.now()
         no_of_months = (current_date - datetime.datetime.strptime(updated_at, '%Y-%m-%dT%H:%M:%SZ')).days / 30
         return round(no_of_months)
@@ -50,5 +52,6 @@ class Github:
         """Returns the data of the repository"""
         data = {'created_since_months': self.created_since_months(), 'updated_since_months': self.updated_since_months(),
                 'forks': self.get_forks_count(),
-                'contributors': self.get_contributors_count(), 'commits': self.get_commits_count()}
+                'contributors': self.get_contributors_count(), 'commits': self.get_commits_count(),
+                'created_on': self.data['created_on'], 'last_updated': self.data['last_updated']}
         return data

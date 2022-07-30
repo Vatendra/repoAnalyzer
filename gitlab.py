@@ -17,6 +17,7 @@ class Gitlab:
     def created_since_months(self):
         """Returns the number of months since the project was created"""
         created_at = datetime.datetime.strptime(self.response['created_at'], '%Y-%m-%dT%H:%M:%S.%fZ')
+        self.data['created_on'] = created_at[:10]
         current_date = datetime.datetime.now()
         no_of_months = (current_date - created_at).days / 30
         return round(no_of_months)
@@ -24,6 +25,7 @@ class Gitlab:
     def updated_since_months(self):
         """Returns the number of months since the project was updated"""
         updated_at = datetime.datetime.strptime(self.response['last_activity_at'], '%Y-%m-%dT%H:%M:%S.%fZ')
+        self.data['last_updated'] = updated_at[:10]
         current_date = datetime.datetime.now()
         no_of_months = (current_date - updated_at).days / 30
         return round(no_of_months)
@@ -67,6 +69,7 @@ class Gitlab:
         """Returns the data of the repository"""
         data = {'created_since_months': self.created_since_months(), 'updated_since_months': self.updated_since_months(),
                 'forks': self.get_forks_count(),
-                'contributors': self.get_contributors_count(), 'commits': self.get_commits_count()}
+                'contributors': self.get_contributors_count(), 'commits': self.get_commits_count(),
+                'created_at': self.data['created_on'], 'updated_at': self.data['last_updated']}
         return data
 

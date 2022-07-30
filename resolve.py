@@ -7,7 +7,7 @@ class Resolve:
         self.url = url
         self.parsed_url = urlparse(url)
 
-    def __get_repo_name(self) -> str:
+    def get_repo_name(self) -> str:
         """Return repo name from URL."""
         return str(self.parsed_url.path.split('/')[2])
 
@@ -21,18 +21,18 @@ class Resolve:
         if domain.startswith("www."):
             domain = domain[4:]
         if domain == "bitbucket.org":
-            return 'bitbucket', "https://api.bitbucket.org/2.0/repositories/" + self.__get_repo_owner() + "/" +\
-                   self.__get_repo_name()
+            return 'bitbucket', "https://api.bitbucket.org/2.0/repositories/" + self.__get_repo_owner() + "/" + \
+                   self.get_repo_name()
         elif domain == "github.com":
-            return 'github', "https://api.github.com/repos/" + self.__get_repo_owner() + "/" +\
-                   self.__get_repo_name()
+            return 'github', "https://api.github.com/repos/" + self.__get_repo_owner() + "/" + \
+                   self.get_repo_name()
         elif domain == "gitlab.com":
-            return 'gitlab', "https://gitlab.com/api/v4/projects/" + self.__get_repo_owner() + "%2F" +\
-                   self.__get_repo_name()
+            return 'gitlab', "https://gitlab.com/api/v4/projects/" + self.__get_repo_owner() + "%2F" + \
+                   self.get_repo_name()
         elif domain == "npmjs.com":
-            print("https://registry.npmjs.org/" + self.__get_repo_name())
-            return 'npm', "https://registry.npmjs.org/" + self.__get_repo_name()
+            print("https://registry.npmjs.org/" + self.get_repo_name())
+            return 'npm', "https://registry.npmjs.org/" + self.get_repo_name()
         elif domain == "pypi.org":
-            return 'pypi', "https://pypi.org/pypi/" + self.__get_repo_name() + "/json"
+            return 'pypi', "https://pypi.org/pypi/" + self.get_repo_name() + "/json"
         else:
             return '', ''
