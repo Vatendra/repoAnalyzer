@@ -1,3 +1,5 @@
+> Note: add gitlab private token in configy.py. Only required for gitlab repos. 
+
 # Project Name: RepoAnalyser
 # Flipkart Grid 4.0
 
