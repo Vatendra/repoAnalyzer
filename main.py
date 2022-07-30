@@ -30,7 +30,7 @@ class Main:
             return {}
         data['ccf_score'] = Ccf(data).get_ccf_score()
         data['image_path'] = "unsafe_repo.png"
-        # have taken 6 as the base point for a repo to be safe
+        # have taken 4 as the base point for a repo to be safe
         if data['ccf_score'] > 4:
             data['image_path'] = "safe_repo.png"
         data['repo_name'] = Resolve(self.url).get_repo_name()
