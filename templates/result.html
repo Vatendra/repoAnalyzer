@@ -10,7 +10,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="/">Home</a>
+              <a class="navbar-brand" href="/"><b>Home</b></a>
           </div>
           </ul>
         </div>
@@ -22,13 +22,20 @@
                 <!-- embed safe and unsafe image src in the data -->
               <img src="{{ url_for('static', filename = 'images/' + data['image_path']) }}"alt="" class="avatar">
             </div>
+
             <div class="user-info">
-              <h2> Critical Score: {{data['ccf_score']}}</h2>
+              <h2> Critical Score: {{data['ccf_score']}}/10</h2>
               <ul>
-                <li>{{ data['commits'] }} <strong>Commits</strong></li>
-                <li>{{ data['contributors'] }} <strong>Contributors</strong></li>
+                <li>{{ data['commits'] }} <strong>Commits, &nbsp</strong></li>
+                <li>{{ data['contributors'] }} <strong>Contributors, &nbsp</strong></li>
                 <li>{{ data['forks'] }} <strong>Forks</strong></li>
               </ul>
+                <ul>
+                    <li><strong>Created On: &nbsp</strong>{{ data['created_on'] }} </li>
+                </ul>
+                <ul>
+                    <li><strong>Last Updated:&nbsp</strong>{{ data['last_updated'] }} </li>
+                </ul>
             </div>
           </div>
     </main>
