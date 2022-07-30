@@ -29,8 +29,8 @@ class Main:
         else:
             return {}
         data['critical_score'] = Ccf(data).get_ccf_score()
-        data['image_path']="\static\images\unsafe_repo.png"
+        data['image_path'] = "unsafe_repo.png"
         # have taken 6 as the base point for a repo to be safe
-        if(data['critical_score'] >6):
-            data['image_path'] = "\static\images\safe_repo.png"
+        if data['critical_score'] > 6:
+            data['image_path'] = "safe_repo.png"
         return data
