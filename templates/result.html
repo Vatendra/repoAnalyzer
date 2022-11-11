@@ -20,7 +20,7 @@
         <div class="card">
             <div>
                 <!-- embed safe and unsafe image src in the data -->
-              <img src="{{ url_for('/static', filename = 'images/' + data['image_path']) }}"alt="" class="avatar">
+              <img src="{{ url_for('static', filename = 'images/' + data['image_path']) }}"alt="" class="avatar">
             </div>
 
             <div class="user-info">
